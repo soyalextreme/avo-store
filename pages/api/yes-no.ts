@@ -8,7 +8,7 @@ const yesNo = (req: NextApiRequest, res: NextApiResponse) => {
   } else {
     yesNo = false
   }
-  res.json({ number: randomNumber, yesNo })
+  res.json({ yesNo })
 }
 
 export default yesNo

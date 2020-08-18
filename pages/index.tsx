@@ -2,9 +2,10 @@ import React from 'react'
 import CardProducts from '@components/CardProducts'
 import Spinner from '@components/Spinner'
 import fetch from 'isomorphic-unfetch'
+import { Proxy } from '@constants'
 
 export const getServerSideProps = async () => {
-  const response = await fetch('https://avo-store.vercel.app/api/avo')
+  const response = await fetch(`${Proxy}/api/avo`)
   const { data: productlist } = await response.json()
   return {
     props: {

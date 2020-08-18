@@ -5,3 +5,5 @@ export enum Colors {
   brownDark = '#3c2946',
 }
 //? Here all constants of your project
+
+export const Proxy = 'https://avo-store-oby7hwnip.vercel.app/'
