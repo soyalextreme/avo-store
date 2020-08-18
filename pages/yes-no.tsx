@@ -18,7 +18,7 @@ const useContainer = (loading: boolean) => {
   `
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const res = await fetch(`${Proxy}/api/yes-no`)
   const { yesNo: answer } = await res.json()
   return {
