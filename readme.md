@@ -18,6 +18,6 @@
 Go check how it Looks!
 [Production Site](https://avo-store-git-master.soyalextreme.vercel.app/)
 
-### especia greetings to the teacher.
+### Especial greetings to the teacher.
 
 [John Alvarez](https://twitter.com/jonalvarezz)
