@@ -3,8 +3,9 @@ import CardProducts from '@components/CardProducts'
 import Spinner from '@components/Spinner'
 import fetch from 'isomorphic-unfetch'
 import { Proxy } from '@constants'
+import { GetStaticProps } from 'next'
 
-export const getServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const response = await fetch(`${Proxy}/api/avo`)
   const { data: productlist } = await response.json()
   return {
