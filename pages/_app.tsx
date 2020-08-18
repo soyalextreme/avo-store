@@ -4,10 +4,12 @@ import { Helmet } from 'react-helmet'
 import '../global.config.css'
 import { CartProvider } from '@context/Cart/Provider'
 
+//? FOR METRIC UNCOMMENT THIS FUNCTION
+// export function reportWebVitals(metric) {
+//   console.log(metric)
+// }
+
 function MyApp({ Component, pageProps }: AppProps) {
-  // Providers Context
-  // layout
-  // Props adicionales
   return (
     <CartProvider>
       <Layout>
