@@ -24,9 +24,9 @@ const Container = styled.div`
     border-radius: 20rem;
   }
 
-  @media (min-width: 452px) and (max-width: 574px) {
+  @media (min-width: 300px) and (max-width: 574px) {
     img {
-      width: 15rem;
+      width: 10rem;
     }
   }
 `

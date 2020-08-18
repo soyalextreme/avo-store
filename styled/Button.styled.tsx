@@ -15,4 +15,9 @@ export const Button = styled.a`
     background-color: ${Colors.brownClear};
     cursor: pointer;
   }
+
+  @media (min-width: 300px) and (max-width: 400px) {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
 `

@@ -21,6 +21,9 @@ const Nav = styled.div`
   .menu-item {
     width: 30%;
   }
+  .menu-principal {
+    width: 30%;
+  }
 
   i {
     color: white;
@@ -49,6 +52,25 @@ const Nav = styled.div`
   img {
     width: 10%;
   }
+
+  @media (min-width: 300px) and (max-width: 400px) {
+    a {
+      font-size: 1rem;
+    }
+    span {
+      font-size: 0.6rem;
+    }
+
+    i {
+      display: none;
+    }
+    img {
+      width: 15%;
+    }
+    .menu-item {
+      width: 25%;
+    }
+  }
 `
 
 export default function Navbar() {
@@ -59,10 +81,10 @@ export default function Navbar() {
       <menu>
         <div className="menu-item sec">
           <Link href="/yes-no">
-            <a>Ask a Question..</a>
+            <a>Y|N</a>
           </Link>
         </div>
-        <div className="menu-item">
+        <div className="menu-principal">
           <Header mode={'Clear'} />
         </div>
         <div className="menu-item sec">

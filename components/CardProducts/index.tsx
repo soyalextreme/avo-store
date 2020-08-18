@@ -12,6 +12,12 @@ const Container = styled.div`
   :last-of-type {
     margin-bottom: 2rem;
   }
+
+  @media (min-width: 300px) and (max-width: 452px) {
+    img {
+      width: 10rem;
+    }
+  }
 `
 
 export interface CardProductsProps {

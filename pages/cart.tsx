@@ -19,6 +19,12 @@ const Container = styled.div`
     justify-content: space-around;
     margin-top: 2rem;
   }
+
+  @media (min-width: 300px) and (max-width: 550px) {
+    img {
+      width: 50%;
+    }
+  }
 `
 export interface CartProps {}
 
