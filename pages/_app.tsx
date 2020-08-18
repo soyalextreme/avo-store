@@ -12,18 +12,20 @@ function MyApp({ Component, pageProps }: AppProps) {
     <CartProvider>
       <Layout>
         <Helmet>
+          //? Fonts
           <link
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
             integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
             crossOrigin="anonymous"
           />
-
           <link
             href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
             rel="stylesheet"
           />
+          //? Favicon
           <link rel="icon" href="static/favicon.ico" />
+          //? bootstrap
           <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"

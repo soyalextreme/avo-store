@@ -1,22 +1,24 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import CardProducts from '@components/CardProducts'
 import Spinner from '@components/Spinner'
+import fetch from 'isomorphic-unfetch'
 
-const HomePage = () => {
-  const [productlist, setProductlist] = useState<TProduct[]>([])
+export const getServerSideProps = async () => {
+  const response = await fetch('https://avo-store.vercel.app/api/avo')
+  const { data: productlist } = await response.json()
+  return {
+    props: {
+      productlist,
+    },
+  }
+}
 
-  useEffect(() => {
-    window
-      .fetch('/api/avo')
-      .then((res) => res.json())
-      .then(({ data, length }) => setProductlist(data))
+export interface HomePageProps {
+  productlist: TProduct[]
+}
 
-    localStorage.setItem('amount', '0')
-
-    console.log(productlist)
-  }, [])
-
-  if (productlist.length == 0) {
+const HomePage: React.SFC<HomePageProps> = ({ productlist }) => {
+  if (productlist.length === 0) {
     return <Spinner />
   }
 

@@ -57,10 +57,15 @@ export default function Navbar() {
   return (
     <Nav>
       <menu>
+        <div className="menu-item sec">
+          <Link href="/yes-no">
+            <a>Ask a Question..</a>
+          </Link>
+        </div>
         <div className="menu-item">
           <Header mode={'Clear'} />
         </div>
-        <div className="menu-item">
+        <div className="menu-item sec">
           <i className="fas fa-shopping-basket"></i>
           <Link href="/cart">
             <a>Cart</a>
