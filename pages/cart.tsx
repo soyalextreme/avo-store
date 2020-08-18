@@ -24,6 +24,7 @@ export interface CartProps {}
 
 const Cart: React.SFC<CartProps> = () => {
   let { items, totalPay } = useContext(ContextCart) as ICartContextState
+  let cartItems = items as Array<TProductCart>
   return (
     <Container>
       {items.length === 0 ? (
@@ -35,7 +36,7 @@ const Cart: React.SFC<CartProps> = () => {
         <Fragment>
           <h1 className="title">My Products on Cart</h1>
           {/* //! Guaranteed it will render with an array */}
-          {items.map((item: TProductCart) => (
+          {cartItems.map((item: TProductCart) => (
             <ProductCart key={item.id} product={item} />
           ))}
           <div className="d-flex jc-sa">
