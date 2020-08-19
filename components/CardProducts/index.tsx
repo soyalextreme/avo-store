@@ -31,7 +31,11 @@ const CardProducts: React.SFC<CardProductsProps> = ({ product }) => {
       <h1 className="title">{product.name}</h1>
       <p>${product.price}</p>
       <br />
-      <ButtonRef title="More Info" href={`/product/${product.id}`} />
+      <ButtonRef
+        title="More Info"
+        as={`/product/${product.id}`}
+        href="/product/[id]"
+      />
     </Container>
   )
 }

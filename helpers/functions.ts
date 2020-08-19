@@ -25,7 +25,9 @@ export const findAndDeleteItemCart = (
 export const calculatePriceCart = (items: TProductCart[]): number => {
   var total = 0
   items.forEach((element) => {
-    total = element.amount * element.price
+    total += element.amount * element.price
+    total = total as number
+    total.toFixed(2)
   })
   return total
 }
